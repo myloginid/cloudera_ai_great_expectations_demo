@@ -31,6 +31,33 @@ Because CAI already sets the Spark defaults (see `spark-defaults.conf`), you do 
 properties. Validating inside CAI ensures the same Kerberos/IDBroker context used by production workloads is applied here
 too.
 
+## Inspecting `gx_demo_test_output.json`
+
+| What to inspect | Why it matters | Tip |
+| --- | --- | --- |
+| `statistics.success_percent` | Overall pass rate | >90% means most expectations succeeded. |
+| `statistics.successful_expectations` / `evaluated_expectations` | Counts per run | Helps verify how many checks executed. |
+| `results[*].expectation_config.type` + `success` | Per-check status | Filter `success == false` to identify failing expectations. |
+| `results[*].result.observed_value` | Actual metric values | Compare to configured thresholds during troubleshooting. |
+| `run_id.run_time` | Execution timestamp | Match the JSON to `gx_demo_run.log` for correlated logs. |
+
+Quick script to print the summary and failing expectations:
+
+```bash
+python - <<'PY'
+import json
+from pathlib import Path
+
+report = json.loads(Path("gx_demo_test_output.json").read_text())
+print("Success %:", report["statistics"]["success_percent"])
+for r in report["results"]:
+    if not r["success"]:
+        print(r["expectation_config"]["type"], r["result"].get("observed_value"))
+PY
+```
+
+Loading `gx_demo_test_output.json` in CAI (click the file) also renders it in the notebook UI for quick review.
+
 ### Architecture sketch
 
 ```mermaid
