@@ -101,3 +101,26 @@ WHERE ingestion_date = (
 
 Or, in PySpark, build a DataFrame with `spark.table("manishm.gx_demo_table").filter("ingestion_date = current_date")`
 before passing it to `SparkDFDataset`. This ensures every expectation runs only on the latest slice.
+
+## Running this suite in Cloudera AI (CAI)
+
+These scripts are designed to be run inside a CAI workspace that already configures Spark, Hive, Kerberos, and the
+`go01-aw-dl` CML connection. To onboard external customers:
+
+1. **Prepare the workspace** – create a project with the standard CAI runtime (Python 3.11 + Spark 3.5.1). Upload the
+   `gx_demo` repo and ensure the `go01-demo-aws-manishm.keytab` file resides in `/home/cdsw`.
+2. **Authenticate** – run `kinit -kt /home/cdsw/go01-demo-aws-manishm.keytab manishm@GO01-DEM.YLCU-ATMI.CLOUDERA.SITE` so
+   the CAI driver pod has a valid TGT for Hive/S3 access. CAI already injects the `CDSW_*` env vars referenced by the Core
+   ML APIs (`cml.data_v1`).
+3. **Execute the GX demo** – trigger `python data_quality_checks_gx_demo.py -o gx_demo_test_output.json` from the project
+   root. The script will either reuse the shared Spark session via `cmldata.get_connection("go01-aw-dl")` or fall back to
+   a local builder that already configures the Iceberg catalog and Kerberos extensions. Validation results land in
+   `gx_demo_test_output.json`.
+4. **Interpret the output** – open the generated JSON or inspect `gx_demo_run.log` for the GE statistics (success percent,
+   failing expectations, observed values). The job writes the final line `Validation saved to gx_demo_test_output.json`.
+5. **Extend to other tables** – copy `data_quality_checks_gx_demo.py`, edit `DEFAULT_CONFIG` for the new schema, and run
+   the script with `--config my_overrides.json` and `--query "SELECT ..."` against any CAI cluster-accessible table.
+
+Because CAI already sets the Spark defaults (see `spark-defaults.conf`), you do not need to pass additional JVM
+properties. Validating inside CAI ensures the same Kerberos/IDBroker context used by production workloads is applied here
+too.
