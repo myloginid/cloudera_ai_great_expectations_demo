@@ -1,0 +1,3359 @@
+{
+  "success": false,
+  "results": [
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_to_exist",
+        "kwargs": {
+          "column": "row_id"
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "row_id",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_unique",
+        "kwargs": {
+          "column": "row_id"
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "batch_dt",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "column": "batch_dt",
+          "mostly": 0.9,
+          "min_value": 1
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "src_system",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "column": "src_system",
+          "mostly": 0.9,
+          "min_value": 1
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": false,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "nullable_comment",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 3,
+        "unexpected_percent": 30.0,
+        "partial_unexpected_list": [
+          null,
+          null,
+          null
+        ],
+        "partial_unexpected_counts": [
+          {
+            "value": null,
+            "count": 3
+          }
+        ]
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "column": "nullable_comment",
+          "mostly": 0.9,
+          "min_value": 1
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 3,
+        "missing_percent": 30.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": false,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "all_null_col",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 10,
+        "unexpected_percent": 100.0,
+        "partial_unexpected_list": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "partial_unexpected_counts": [
+          {
+            "value": null,
+            "count": 10
+          }
+        ]
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "column": "all_null_col",
+          "mostly": 0.9,
+          "min_value": 1
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": null,
+        "partial_unexpected_list": [],
+        "missing_count": 10,
+        "missing_percent": 100.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": null,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_null",
+        "kwargs": {
+          "column": "all_null_col"
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "required_col",
+          "mostly": 0.99
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "column": "required_col",
+          "mostly": 0.9,
+          "min_value": 1
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "business_key",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "column": "business_key",
+          "mostly": 0.9,
+          "min_value": 1
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "column": "business_key",
+          "min_value": 0.7,
+          "max_value": 1.0
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "observed_value": 0.8
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": false,
+      "expectation_config": {
+        "type": "expect_column_unique_value_count_to_be_between",
+        "kwargs": {
+          "column": "business_key",
+          "min_value": 10,
+          "max_value": 1000
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "observed_value": 8
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "compound_key_1",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "column": "compound_key_1",
+          "mostly": 0.9,
+          "min_value": 1
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "compound_key_2",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "category",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "column": "category",
+          "mostly": 0.9,
+          "min_value": 1
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_kl_divergence_to_be_less_than",
+        "kwargs": {
+          "column": "category",
+          "partition_object": {
+            "values": [
+              "A",
+              "B",
+              "C"
+            ],
+            "weights": [
+              0.3,
+              0.3,
+              0.4
+            ]
+          },
+          "threshold": 0.5
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "observed_value": 0.09151622184943578,
+        "details": {
+          "observed_partition": {
+            "values": [
+              "A",
+              "B",
+              "C"
+            ],
+            "weights": [
+              0.4,
+              0.4,
+              0.2
+            ]
+          },
+          "expected_partition": {
+            "values": [
+              "A",
+              "B",
+              "C"
+            ],
+            "weights": [
+              0.3,
+              0.3,
+              0.4
+            ]
+          }
+        }
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "column": "category",
+          "value_set": [
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_distinct_values_to_be_in_set",
+        "kwargs": {
+          "column": "category",
+          "value_set": [
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "observed_value": null,
+        "unexpected_count": 0,
+        "partial_unexpected_list": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_distinct_values_to_contain_set",
+        "kwargs": {
+          "column": "category",
+          "value_set": [
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "observed_value": null,
+        "missing_count": 0,
+        "partial_missing_list": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_distinct_values_to_equal_set",
+        "kwargs": {
+          "column": "category",
+          "value_set": [
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "observed_value": null,
+        "unexpected_count": 0,
+        "missing_count": 0,
+        "partial_unexpected_list": [],
+        "partial_missing_list": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "status",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "column": "status",
+          "mostly": 0.9,
+          "min_value": 1
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_most_common_value_to_be_in_set",
+        "kwargs": {
+          "column": "status",
+          "value_set": [
+            "ACTIVE",
+            "PENDING",
+            "INACTIVE"
+          ]
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "observed_value": [
+          "ACTIVE"
+        ]
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "country_cd",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "column": "country_cd",
+          "mostly": 0.9,
+          "min_value": 1
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "currency_cd",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "column": "currency_cd",
+          "mostly": 0.9,
+          "min_value": 1
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "amount",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "column": "amount",
+          "min_value": 0.0,
+          "max_value": 2000.0
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_max_to_be_between",
+        "kwargs": {
+          "column": "amount",
+          "min_value": 0.0,
+          "max_value": 10000.0
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "observed_value": 200.0
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_mean_to_be_between",
+        "kwargs": {
+          "column": "amount",
+          "min_value": 50.0,
+          "max_value": 500.0
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "observed_value": 154.0
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_median_to_be_between",
+        "kwargs": {
+          "column": "amount",
+          "min_value": 40.0,
+          "max_value": 400.0
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "observed_value": 155.0
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_min_to_be_between",
+        "kwargs": {
+          "column": "amount",
+          "min_value": 0.0,
+          "max_value": 10000.0
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "observed_value": 100.0
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_quantile_values_to_be_between",
+        "kwargs": {
+          "column": "amount",
+          "quantile_ranges": {
+            "quantiles": [
+              0.25,
+              0.5,
+              0.75
+            ],
+            "value_ranges": [
+              [
+                10,
+                200
+              ],
+              [
+                20,
+                400
+              ],
+              [
+                50,
+                800
+              ]
+            ]
+          }
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "observed_value": {
+          "quantiles": [
+            0.25,
+            0.5,
+            0.75
+          ],
+          "values": [
+            130.0,
+            150.0,
+            180.0
+          ]
+        },
+        "details": {
+          "success_details": [
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_stdev_to_be_between",
+        "kwargs": {
+          "column": "amount",
+          "min_value": 0.0,
+          "max_value": 1000.0
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "observed_value": 32.041639575194445
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_sum_to_be_between",
+        "kwargs": {
+          "column": "amount",
+          "min_value": 100.0,
+          "max_value": 1000000.0
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "observed_value": 1540.0
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "column": "amount",
+          "type_": "DoubleType"
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "observed_value": "DoubleType"
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "score",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "column": "score",
+          "mostly": 0.9,
+          "min_value": 0.0
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "measure_a",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_in_type_list",
+        "kwargs": {
+          "column": "measure_a",
+          "type_list": [
+            "IntegerType",
+            "LongType"
+          ]
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "observed_value": "IntegerType"
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "measure_b",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "fixed_sum_1",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "fixed_sum_2",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "fixed_sum_3",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "equal_col_a",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "column": "equal_col_a",
+          "mostly": 0.9,
+          "min_value": 1
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "equal_col_b",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "column": "equal_col_b",
+          "mostly": 0.9,
+          "min_value": 1
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "code_a",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "column": "code_a",
+          "mostly": 0.9,
+          "min_value": 1
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "code_b",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "column": "code_b",
+          "mostly": 0.9,
+          "min_value": 1
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "code_c",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "column": "code_c",
+          "mostly": 0.9,
+          "min_value": 1
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "email",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "column": "email",
+          "mostly": 0.9,
+          "min_value": 1
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "column": "email",
+          "mostly": 0.95,
+          "regex": "[^@\\s]+@[^@\\s]+\\.[^@\\s]+"
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "phone10",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "column": "phone10",
+          "mostly": 0.9,
+          "min_value": 1
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "column": "phone10",
+          "regex": "^[0-9]{10}$"
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "postal_code",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "column": "postal_code",
+          "mostly": 0.9,
+          "min_value": 1
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": false,
+      "expectation_config": {
+        "type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "column": "postal_code",
+          "regex": "^[0-9]{5}(-[0-9]{4})?$"
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 10,
+        "unexpected_percent": 100.0,
+        "partial_unexpected_list": [
+          "560001",
+          "560002",
+          "100001",
+          "100002",
+          "200001",
+          "560003",
+          "560004",
+          "100003",
+          "200002",
+          "200003"
+        ],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "partial_unexpected_counts": [
+          {
+            "value": "100001",
+            "count": 1
+          },
+          {
+            "value": "100002",
+            "count": 1
+          },
+          {
+            "value": "100003",
+            "count": 1
+          },
+          {
+            "value": "200001",
+            "count": 1
+          },
+          {
+            "value": "200002",
+            "count": 1
+          },
+          {
+            "value": "200003",
+            "count": 1
+          },
+          {
+            "value": "560001",
+            "count": 1
+          },
+          {
+            "value": "560002",
+            "count": 1
+          },
+          {
+            "value": "560003",
+            "count": 1
+          },
+          {
+            "value": "560004",
+            "count": 1
+          }
+        ]
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "like_code",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "column": "like_code",
+          "mostly": 0.9,
+          "min_value": 1
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "free_text",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "column": "free_text",
+          "mostly": 0.9,
+          "min_value": 1
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_match_regex_list",
+        "kwargs": {
+          "column": "free_text",
+          "regex_list": [
+            "BAD-.*",
+            "FORBIDDEN.*",
+            "^UNWANTED.*$",
+            "^BAD\\-.*$"
+          ]
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "regex_id",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "column": "regex_id",
+          "mostly": 0.9,
+          "min_value": 1
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_unique",
+        "kwargs": {
+          "column": "regex_id"
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "column": "regex_id",
+          "regex": "^EMP[0-9]{4}$"
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "regex_list_id",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "column": "regex_list_id",
+          "mostly": 0.9,
+          "min_value": 1
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_unique",
+        "kwargs": {
+          "column": "regex_list_id"
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_match_regex_list",
+        "kwargs": {
+          "column": "regex_list_id",
+          "regex_list": [
+            "^(AA|BB)-[0-9]{3}$"
+          ]
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "forbidden_token",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "column": "forbidden_token",
+          "mostly": 0.9,
+          "min_value": 1
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": false,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_unique",
+        "kwargs": {
+          "column": "forbidden_token"
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 10,
+        "unexpected_percent": 100.0,
+        "partial_unexpected_list": [
+          "OK",
+          "OK",
+          "OK",
+          "OK",
+          "OK",
+          "OK",
+          "OK",
+          "OK",
+          "OK",
+          "OK"
+        ],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "partial_unexpected_counts": [
+          {
+            "value": "OK",
+            "count": 10
+          }
+        ]
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_in_set",
+        "kwargs": {
+          "column": "forbidden_token",
+          "value_set": [
+            "NULL",
+            "INVALID",
+            "DROP"
+          ]
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "name_txt",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "column": "name_txt",
+          "min_value": 3,
+          "max_value": 50
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "exact_len_2",
+          "mostly": 0.95
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "column": "exact_len_2",
+          "mostly": 0.9,
+          "min_value": 1
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "column": "exact_len_2",
+          "value": 2.0
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_pair_values_a_to_be_greater_than_b",
+        "kwargs": {
+          "column_A": "measure_a",
+          "column_B": "measure_b"
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_multicolumn_sum_to_equal",
+        "kwargs": {
+          "column_list": [
+            "fixed_sum_1",
+            "fixed_sum_2",
+            "fixed_sum_3"
+          ],
+          "sum_total": 100.0
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_table_column_count_to_be_between",
+        "kwargs": {
+          "min_value": 30.0,
+          "max_value": 40.0
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "observed_value": 35
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": false,
+      "expectation_config": {
+        "type": "expect_table_column_count_to_equal",
+        "kwargs": {
+          "value": 32
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "observed_value": 35
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": false,
+      "expectation_config": {
+        "type": "expect_table_columns_to_match_ordered_list",
+        "kwargs": {
+          "column_list": [
+            "row_id",
+            "nullable_comment",
+            "all_null_col",
+            "required_col",
+            "amount",
+            "score",
+            "measure_a",
+            "measure_b",
+            "fixed_sum_1",
+            "fixed_sum_2",
+            "fixed_sum_3",
+            "category",
+            "business_key",
+            "status",
+            "country_cd",
+            "currency_cd",
+            "name_txt",
+            "exact_len_2",
+            "forbidden_token",
+            "like_code",
+            "free_text",
+            "email",
+            "regex_id",
+            "regex_list_id",
+            "phone10",
+            "postal_code",
+            "equal_col_a",
+            "equal_col_b",
+            "code_a",
+            "code_b",
+            "code_c",
+            "compound_key_1",
+            "compound_key_2"
+          ]
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "observed_value": [
+          "row_id",
+          "batch_dt",
+          "src_system",
+          "nullable_comment",
+          "all_null_col",
+          "required_col",
+          "business_key",
+          "compound_key_1",
+          "compound_key_2",
+          "category",
+          "status",
+          "country_cd",
+          "currency_cd",
+          "amount",
+          "score",
+          "measure_a",
+          "measure_b",
+          "fixed_sum_1",
+          "fixed_sum_2",
+          "fixed_sum_3",
+          "equal_col_a",
+          "equal_col_b",
+          "code_a",
+          "code_b",
+          "code_c",
+          "email",
+          "phone10",
+          "postal_code",
+          "like_code",
+          "free_text",
+          "regex_id",
+          "regex_list_id",
+          "forbidden_token",
+          "name_txt",
+          "exact_len_2"
+        ],
+        "details": {
+          "mismatched": [
+            {
+              "Expected Column Position": 1,
+              "Expected": "nullable_comment",
+              "Found": "batch_dt"
+            },
+            {
+              "Expected Column Position": 2,
+              "Expected": "all_null_col",
+              "Found": "src_system"
+            },
+            {
+              "Expected Column Position": 3,
+              "Expected": "required_col",
+              "Found": "nullable_comment"
+            },
+            {
+              "Expected Column Position": 4,
+              "Expected": "amount",
+              "Found": "all_null_col"
+            },
+            {
+              "Expected Column Position": 5,
+              "Expected": "score",
+              "Found": "required_col"
+            },
+            {
+              "Expected Column Position": 6,
+              "Expected": "measure_a",
+              "Found": "business_key"
+            },
+            {
+              "Expected Column Position": 7,
+              "Expected": "measure_b",
+              "Found": "compound_key_1"
+            },
+            {
+              "Expected Column Position": 8,
+              "Expected": "fixed_sum_1",
+              "Found": "compound_key_2"
+            },
+            {
+              "Expected Column Position": 9,
+              "Expected": "fixed_sum_2",
+              "Found": "category"
+            },
+            {
+              "Expected Column Position": 10,
+              "Expected": "fixed_sum_3",
+              "Found": "status"
+            },
+            {
+              "Expected Column Position": 11,
+              "Expected": "category",
+              "Found": "country_cd"
+            },
+            {
+              "Expected Column Position": 12,
+              "Expected": "business_key",
+              "Found": "currency_cd"
+            },
+            {
+              "Expected Column Position": 13,
+              "Expected": "status",
+              "Found": "amount"
+            },
+            {
+              "Expected Column Position": 14,
+              "Expected": "country_cd",
+              "Found": "score"
+            },
+            {
+              "Expected Column Position": 15,
+              "Expected": "currency_cd",
+              "Found": "measure_a"
+            },
+            {
+              "Expected Column Position": 16,
+              "Expected": "name_txt",
+              "Found": "measure_b"
+            },
+            {
+              "Expected Column Position": 17,
+              "Expected": "exact_len_2",
+              "Found": "fixed_sum_1"
+            },
+            {
+              "Expected Column Position": 18,
+              "Expected": "forbidden_token",
+              "Found": "fixed_sum_2"
+            },
+            {
+              "Expected Column Position": 19,
+              "Expected": "like_code",
+              "Found": "fixed_sum_3"
+            },
+            {
+              "Expected Column Position": 20,
+              "Expected": "free_text",
+              "Found": "equal_col_a"
+            },
+            {
+              "Expected Column Position": 21,
+              "Expected": "email",
+              "Found": "equal_col_b"
+            },
+            {
+              "Expected Column Position": 22,
+              "Expected": "regex_id",
+              "Found": "code_a"
+            },
+            {
+              "Expected Column Position": 23,
+              "Expected": "regex_list_id",
+              "Found": "code_b"
+            },
+            {
+              "Expected Column Position": 24,
+              "Expected": "phone10",
+              "Found": "code_c"
+            },
+            {
+              "Expected Column Position": 25,
+              "Expected": "postal_code",
+              "Found": "email"
+            },
+            {
+              "Expected Column Position": 26,
+              "Expected": "equal_col_a",
+              "Found": "phone10"
+            },
+            {
+              "Expected Column Position": 27,
+              "Expected": "equal_col_b",
+              "Found": "postal_code"
+            },
+            {
+              "Expected Column Position": 28,
+              "Expected": "code_a",
+              "Found": "like_code"
+            },
+            {
+              "Expected Column Position": 29,
+              "Expected": "code_b",
+              "Found": "free_text"
+            },
+            {
+              "Expected Column Position": 30,
+              "Expected": "code_c",
+              "Found": "regex_id"
+            },
+            {
+              "Expected Column Position": 31,
+              "Expected": "compound_key_1",
+              "Found": "regex_list_id"
+            },
+            {
+              "Expected Column Position": 32,
+              "Expected": "compound_key_2",
+              "Found": "forbidden_token"
+            },
+            {
+              "Expected Column Position": 33,
+              "Expected": null,
+              "Found": "name_txt"
+            },
+            {
+              "Expected Column Position": 34,
+              "Expected": null,
+              "Found": "exact_len_2"
+            }
+          ]
+        }
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": false,
+      "expectation_config": {
+        "type": "expect_table_columns_to_match_set",
+        "kwargs": {
+          "column_set": [
+            "country_cd",
+            "code_a",
+            "currency_cd",
+            "measure_b",
+            "measure_a",
+            "free_text",
+            "name_txt",
+            "compound_key_2",
+            "status",
+            "regex_list_id",
+            "category",
+            "all_null_col",
+            "code_b",
+            "regex_id",
+            "business_key",
+            "email",
+            "fixed_sum_2",
+            "fixed_sum_3",
+            "code_c",
+            "fixed_sum_1",
+            "forbidden_token",
+            "amount",
+            "equal_col_b",
+            "row_id",
+            "compound_key_1",
+            "phone10",
+            "nullable_comment",
+            "required_col",
+            "postal_code",
+            "equal_col_a",
+            "score",
+            "exact_len_2",
+            "like_code"
+          ]
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "observed_value": [
+          "all_null_col",
+          "amount",
+          "batch_dt",
+          "business_key",
+          "category",
+          "code_a",
+          "code_b",
+          "code_c",
+          "compound_key_1",
+          "compound_key_2",
+          "country_cd",
+          "currency_cd",
+          "email",
+          "equal_col_a",
+          "equal_col_b",
+          "exact_len_2",
+          "fixed_sum_1",
+          "fixed_sum_2",
+          "fixed_sum_3",
+          "forbidden_token",
+          "free_text",
+          "like_code",
+          "measure_a",
+          "measure_b",
+          "name_txt",
+          "nullable_comment",
+          "phone10",
+          "postal_code",
+          "regex_id",
+          "regex_list_id",
+          "required_col",
+          "row_id",
+          "score",
+          "src_system",
+          "status"
+        ],
+        "details": {
+          "mismatched": {
+            "unexpected": [
+              "batch_dt",
+              "src_system"
+            ]
+          }
+        }
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_pair_values_to_be_equal",
+        "kwargs": {
+          "column_A": "equal_col_a",
+          "column_B": "equal_col_b"
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_pair_values_to_be_in_set",
+        "kwargs": {
+          "column_A": "country_cd",
+          "column_B": "currency_cd",
+          "value_pairs_set": [
+            [
+              "IN",
+              "INR"
+            ],
+            [
+              "US",
+              "USD"
+            ],
+            [
+              "SG",
+              "SGD"
+            ]
+          ]
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_compound_columns_to_be_unique",
+        "kwargs": {
+          "column_list": [
+            "compound_key_1",
+            "compound_key_2"
+          ]
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_select_column_values_to_be_unique_within_record",
+        "kwargs": {
+          "column_list": [
+            "code_a",
+            "code_b",
+            "code_c"
+          ],
+          "ignore_row_if": "any_value_is_missing"
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 10,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": false,
+      "expectation_config": {
+        "type": "expect_table_row_count_to_be_between",
+        "kwargs": {
+          "min_value": 50,
+          "max_value": 10000
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "observed_value": 10
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": false,
+      "expectation_config": {
+        "type": "expect_table_row_count_to_equal",
+        "kwargs": {
+          "value": 100
+        },
+        "meta": {},
+        "severity": "critical"
+      },
+      "result": {
+        "observed_value": 10
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    }
+  ],
+  "suite_name": "sparkdf_dataset_adapter",
+  "suite_parameters": {},
+  "statistics": {
+    "evaluated_expectations": 106,
+    "successful_expectations": 96,
+    "unsuccessful_expectations": 10,
+    "success_percent": 90.56603773584906
+  },
+  "meta": {
+    "great_expectations_version": "1.15.1",
+    "expectation_suite_name": "sparkdf_dataset_adapter",
+    "run_id": {
+      "run_name": null,
+      "run_time": "2026-03-30T08:01:14.924536+00:00"
+    },
+    "batch_spec": {},
+    "batch_markers": {
+      "ge_load_time": "20260330T075820.198119Z"
+    },
+    "active_batch_definition": {},
+    "validation_time": "20260330T080114.924390Z",
+    "checkpoint_name": null
+  },
+  "id": null
+}
