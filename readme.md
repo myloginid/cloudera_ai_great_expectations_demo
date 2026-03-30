@@ -13,11 +13,10 @@ GX-focused PySpark runners that read Hive tables, apply expectation suites, and 
 These scripts are designed to be run inside a CAI workspace that already configures Spark, Hive, Kerberos, and the
 `go01-aw-dl` CML connection. To onboard external customers:
 
-1. **Prepare the workspace** – create a project with the standard CAI runtime (Python 3.11 + Spark 3.5.1). Upload the
-   `gx_demo` repo and ensure the `go01-demo-aws-manishm.keytab` file resides in `/home/cdsw`.
-2. **Authenticate** – run `kinit -kt /home/cdsw/go01-demo-aws-manishm.keytab manishm@GO01-DEM.YLCU-ATMI.CLOUDERA.SITE` so
-   the CAI driver pod has a valid TGT for Hive/S3 access. CAI already injects the `CDSW_*` env vars referenced by the Core
-   ML APIs (`cml.data_v1`).
+1. **Prepare the workspace** – launch a CAI project running Python 3.11 + Spark 3.5.1, upload `gx_demo`, and place
+   `go01-demo-aws-manishm.keytab` in `/home/cdsw`.
+2. **Authenticate** – run `kinit -kt /home/cdsw/go01-demo-aws-manishm.keytab manishm@GO01-DEM.YLCU-ATMI.CLOUDERA.SITE` to give
+   the CAI driver pod a TGT; CAI already exposes the `CDSW_*` vars used by `cml.data_v1`.
 3. **Execute the GX demo** – trigger `python data_quality_checks_gx_demo.py -o gx_demo_test_output.json` from the project
    root. The script will either reuse the shared Spark session via `cmldata.get_connection("go01-aw-dl")` or fall back to
    a local builder that already configures the Iceberg catalog and Kerberos extensions. Validation results land in
