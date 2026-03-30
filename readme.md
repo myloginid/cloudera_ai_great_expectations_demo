@@ -15,12 +15,6 @@ so downstream workflows can inspect pass/fail states.
 
 ## Data-quality jobs
 
-### `data_quality_checks.py` (local sample)
-
-Targets `resources/users.parquet`. It cycles through every column, verifying existence, mostly-not-null, pattern
-matches (email, postal, dates), unique IDs, and heuristics for numeric hints like `amount`/`score`. This script
-serves as a template for how to wrap `SparkDFDataset` against arbitrary DataFrames.
-
 ### `data_quality_checks_hms_table.py` (Hive metastore: `airlines_iceberg.flights`)
 
 Runs a configurable query (default: first 100 rows) and executes column-aware expectations such as:
@@ -76,9 +70,6 @@ The expectation suite only uses the Spark-supported GE expectations that ship wi
 3. Guard expensive checks with `run_if_columns_present` (or similar) so the expectation suite is resilient to schema drift.
 4. Wire the new script into your orchestration tool with the appropriate query/setup and direct the output JSON to
    your desired location.
-
-For small projects, the `apply_expectations` helper in `data_quality_checks.py` shows a minimal expectation set that can
-be reused.
 
 ## Checking most-recent partition data only
 
