@@ -98,6 +98,36 @@ WHERE ingestion_date = (
 Or, in PySpark, build a DataFrame with `spark.table("manishm.gx_demo_table").filter("ingestion_date = current_date")`
 before passing it to `SparkDFDataset`. This ensures every expectation runs only on the latest slice.
 
+If your table partitions by `snapshot_date` or numeric `yyyymmdd`, swap `ingestion_date` for the correct column:
+```sql
+WHERE snapshot_date = (
+  SELECT MAX(snapshot_date) FROM manishm.gx_demo_table
+)
+```
+or
+```sql
+WHERE yyyymmdd = (
+  SELECT MAX(yyyymmdd) FROM manishm.gx_demo_table
+)
+```
+In PySpark, read the max partition value first and filter the DataFrame before creating the `SparkDFDataset` so the
+validation always targets the very latest partition regardless of the column naming convention.
+
+If your table partitions by `snapshot_date` or numeric `yyyymmdd`, swap `ingestion_date` for the correct column:
+```sql
+WHERE snapshot_date = (
+  SELECT MAX(snapshot_date) FROM manishm.gx_demo_table
+)
+```
+or
+```sql
+WHERE yyyymmdd = (
+  SELECT MAX(yyyymmdd) FROM manishm.gx_demo_table
+)
+```
+In PySpark, read the max partition value first and filter the DataFrame before creating the `SparkDFDataset` so the
+validation always targets the very latest partition regardless of the column naming convention.
+
 ## Running this suite in Cloudera AI (CAI)
 
 These scripts are designed to be run inside a CAI workspace that already configures Spark, Hive, Kerberos, and the
