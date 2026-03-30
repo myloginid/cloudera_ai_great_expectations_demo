@@ -50,17 +50,6 @@ and S3 configurations instead of building a plain `SparkSession` manually.
 This also means the job shares the same Spark session that the platform already bootstraps, avoiding duplicate sessions and leveraging the existing Kerberos tickets/delegation tokens.
 The expectation suite only uses the Spark-supported GE expectations that ship with this environment; unsupported expectations (like the removed z-score and match-like-pattern list calls) were dropped to prevent missing-provider errors.
 
-### Known limitations
-
-1. `data_quality_checks_gx_demo.py` still fails because Spark executors cannot obtain IDBroker tokens for
-   `s3a://go01-demo/.../gx_demo_table` (`Authentication with IDBroker failed`), so no expectations complete until the
-   cluster issues those tokens to every executor.
-2. `data_quality_checks_gx_demo_impala.py` currently errors with `HTTP 401 Unauthorized` when Impala opens a session;
-   fix the Impala credentials/authorization before this runner can fetch rows.
-3. Unsupported expectations have been removed (`expect_column_proportion_of_nonnull_values_to_be_between`,
-   `expect_column_z_scores_to_be_less_than`, `expect_column_values_to_match_like_pattern_list`) so the remaining suite
-   only calls GE expectations that ship with Spark support in this environment.
-
 ## Extending these checks to new tables
 
 1. Copy `data_quality_checks_gx_demo.py` (or create a new driver) and adjust `DEFAULT_CONFIG` to include the
