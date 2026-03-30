@@ -31,6 +31,33 @@ Because CAI already sets the Spark defaults (see `spark-defaults.conf`), you do 
 properties. Validating inside CAI ensures the same Kerberos/IDBroker context used by production workloads is applied here
 too.
 
+### Architecture sketch
+
+```mermaid
+graph TD
+  CAI[Cloudera AI Workspace]
+  subgraph Platform
+    Spark[Shared Spark session]
+    Kerberos[TGT / Keytab]
+    Connection[cml.data_v1 -> go01-aw-dl]
+  end
+  subgraph Job
+    GX[data_quality_checks_gx_demo.py]
+    SQL[SQL / Spark query]
+    GE[Great Expectations]
+    JSON[gx_demo_test_output.json]
+  end
+  CAI --> Spark
+  CAI --> Kerberos
+  Spark --> Connection
+  GX --> Spark
+  GX --> Kerberos
+  GX --> GE
+  GX --> JSON
+  SQL --> GX
+  GE --> JSON
+```
+
 ## Data-quality jobs
 
 ### `data_quality_checks_hms_table.py`
