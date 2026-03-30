@@ -200,7 +200,17 @@ def build_spark_session() -> SparkSession:
         conn = cmldata.get_connection(CONNECTION_NAME)
         return conn.get_spark_session()
     except Exception:
-        return SparkSession.builder.appName("GreatExpectationsGxDemoQuality").enableHiveSupport().getOrCreate()
+        return (
+            SparkSession.builder.appName("GreatExpectationsGxDemoQuality")
+            .enableHiveSupport()
+            .config("spark.sql.catalog.spark_catalog", "org.apache.iceberg.spark.SparkSessionCatalog")
+            .config("spark.sql.catalog.spark_catalog.type", "hive")
+            .config(
+                "spark.sql.extensions",
+                "org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions",
+            )
+            .getOrCreate()
+        )
 
 
 def apply_completeness_checks(
