@@ -56,13 +56,6 @@ and S3 configurations instead of building a plain `SparkSession` manually.
 This also means the job shares the same Spark session that the platform already bootstraps, avoiding duplicate sessions and leveraging the existing Kerberos tickets/delegation tokens.
 The expectation suite only uses the Spark-supported GE expectations that ship with this environment; unsupported expectations (like the removed z-score and match-like-pattern list calls) were dropped to prevent missing-provider errors.
 
-### `data_quality_checks_gx_demo_impala.py` (Impala-powered)
-
-- Reuses the `default-impala-aws` connection via `cmldata.get_connection` to run `SELECT * FROM manishm.gx_demo_table LIMIT 1000`
-  using Impala, then wraps the resulting pandas DataFrame in `SparkDFDataset` for validation.
-- Because the Impala connection already has the Hive/S3 credentials, this job sidesteps the Spark executor IDBroker issue, though it requires valid Impala authorization (the current connection returns HTTP 401).
-- The script still reuses the shared Spark session for Great Expectations so we can run the existing helper functions.
-
 ### Known limitations
 
 1. `data_quality_checks_gx_demo.py` still fails because Spark executors cannot obtain IDBroker tokens for
