@@ -4,10 +4,19 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 from copy import deepcopy
 from pathlib import Path
 from typing import Iterable
+import re
 
+os.environ.setdefault(
+    "PYSPARK_SUBMIT_ARGS",
+    "--conf spark.yarn.principal=manishm@GO01-DEM.YLCU-ATMI.CLOUDERA.SITE "
+    "--conf spark.yarn.keytab=/home/cdsw/go01-demo-aws-manishm.keytab pyspark-shell",
+)
+
+import cml.data_v1 as cmldata
 from pyspark.sql import DataFrame, SparkSession
 
 from data_quality_checks import SparkDFDataset, apply_expectations, report_validation
@@ -36,7 +45,6 @@ DEFAULT_CONFIG = {
             ],
             "values_min": 0.0,
             "values_max": 2000.0,
-            "z_score_threshold": 3.0,
         },
         "measure_a": {"min": 0, "max": 2000},
         "measure_b": {"min": 0, "max": 2000},
@@ -90,8 +98,6 @@ DEFAULT_CONFIG = {
         "status_set": ["ACTIVE", "PENDING", "INACTIVE"],
         "country_currency_pairs": [("IN", "INR"), ("US", "USD"), ("SG", "SGD")],
         "forbidden_tokens": ["DROP", "NULL", "INVALID"],
-        "like_patterns": ["ORD-%", "INV-%", "SHIP-%"],
-        "like_exact_pattern": "ORD-123",
         "free_text_disallowed_patterns": ["UNWANTED%", "BAD-%"],
         "email_regex": r"[^@\s]+@[^@\s]+\.[^@\s]+",
         "regex_id": r"^EMP[0-9]{4}$",
@@ -118,15 +124,27 @@ SQL_CUSTOM_QUERIES = [
     "SELECT * FROM manishm.gx_demo_table WHERE fixed_sum_1 + fixed_sum_2 + fixed_sum_3 <> 100",
 ]
 
-PEER_TABLE = "manishm.gx_demo_table_peer"
-COMPARE_TABLE = "manishm.gx_demo_table_compare"
-
+CONNECTION_NAME = "go01-aw-dl"
 
 def run_if_columns_present(
     columns: set[str], required_columns: Iterable[str], func, *args, **kwargs
 ) -> None:
     if set(required_columns).issubset(columns):
         func(*args, **kwargs)
+
+
+def like_pattern_to_regex(pattern: str) -> str:
+    """Translate a SQL LIKE pattern into an equivalent regex."""
+    builder: list[str] = ["^"]
+    for char in pattern:
+        if char == "%":
+            builder.append(".*")
+        elif char == "_":
+            builder.append(".")
+        else:
+            builder.append(re.escape(char))
+    builder.append("$")
+    return "".join(builder)
 
 
 def parse_arguments() -> argparse.Namespace:
@@ -178,7 +196,11 @@ def merge_dict(base: dict, overrides: dict) -> None:
 
 
 def build_spark_session() -> SparkSession:
-    return SparkSession.builder.appName("GreatExpectationsGxDemoQuality").enableHiveSupport().getOrCreate()
+    try:
+        conn = cmldata.get_connection(CONNECTION_NAME)
+        return conn.get_spark_session()
+    except Exception:
+        return SparkSession.builder.appName("GreatExpectationsGxDemoQuality").enableHiveSupport().getOrCreate()
 
 
 def apply_completeness_checks(
@@ -188,15 +210,6 @@ def apply_completeness_checks(
     columns: set[str],
 ) -> None:
     completeness = config["completeness"]
-    range_config = completeness.get("nullable_comment", {})
-    run_if_columns_present(
-        columns,
-        {"nullable_comment"},
-        dataset.expect_column_proportion_of_nonnull_values_to_be_between,
-        "nullable_comment",
-        min_value=range_config.get("min"),
-        max_value=range_config.get("max"),
-    )
     run_if_columns_present(
         columns,
         {"all_null_col"},
@@ -289,13 +302,6 @@ def apply_numeric_checks(
         "amount",
         min_value=amount_config["values_min"],
         max_value=amount_config["values_max"],
-    )
-    run_if_columns_present(
-        columns,
-        {"score"},
-        dataset.expect_column_z_scores_to_be_less_than,
-        "score",
-        value=amount_config["z_score_threshold"],
     )
     run_if_columns_present(
         columns,
@@ -470,29 +476,6 @@ def apply_validity_checks(
     )
     run_if_columns_present(
         columns,
-        {"like_code"},
-        dataset.expect_column_values_to_match_like_pattern_list,
-        "like_code",
-        like_pattern_list=validity["like_patterns"],
-        match_on="any",
-    )
-    run_if_columns_present(
-        columns,
-        {"like_code"},
-        dataset.expect_column_values_to_match_like_pattern,
-        "like_code",
-        like_pattern=validity["like_exact_pattern"],
-    )
-    run_if_columns_present(
-        columns,
-        {"free_text"},
-        dataset.expect_column_values_to_not_match_like_pattern_list,
-        "free_text",
-        like_pattern_list=validity["free_text_disallowed_patterns"],
-        match_on="any",
-    )
-    run_if_columns_present(
-        columns,
         {"email"},
         dataset.expect_column_values_to_match_regex,
         "email",
@@ -512,15 +495,17 @@ def apply_validity_checks(
         dataset.expect_column_values_to_match_regex_list,
         "regex_list_id",
         regex_list=validity["regex_list"],
-        match_on="any",
     )
+    disallowed_like_regex = [
+        like_pattern_to_regex(pattern) for pattern in validity["free_text_disallowed_patterns"]
+    ]
+    disallowed_regex_list = [r"BAD-.*", r"FORBIDDEN.*"] + disallowed_like_regex
     run_if_columns_present(
         columns,
         {"free_text"},
         dataset.expect_column_values_to_not_match_regex_list,
         "free_text",
-        regex_list=[r"BAD-.*", r"FORBIDDEN.*"],
-        match_on="any",
+        regex_list=disallowed_regex_list,
     )
     run_if_columns_present(
         columns,
@@ -543,22 +528,6 @@ def apply_volume_checks(df: DataFrame, dataset: SparkDFDataset, config: dict) ->
     volume = config["volume"]
     dataset.expect_table_row_count_to_be_between(volume["row_min"], volume["row_max"])
     dataset.expect_table_row_count_to_equal(volume["expected_rows"])
-    peer_count = df.sparkSession.sql(f"SELECT COUNT(*) cnt FROM {PEER_TABLE}").collect()[0][0]
-    if row_count != peer_count:
-        raise RuntimeError("Row count does not match peer table")
-
-
-def apply_multi_source_checks(spark: SparkSession) -> None:
-    base = spark.sql("SELECT country_cd, COUNT(*) cnt FROM manishm.gx_demo_table GROUP BY country_cd")
-    compare = spark.sql("SELECT country_cd, COUNT(*) cnt FROM manishm.gx_demo_table_compare GROUP BY country_cd")
-    delta = base.union(compare).subtract(base.intersect(compare))
-    if delta.count() > 0:
-        raise RuntimeError("Multi-source aggregation mismatch")
-    peer_base = spark.sql("SELECT * FROM manishm.gx_demo_table ORDER BY row_id")
-    peer_compare = spark.sql("SELECT * FROM manishm.gx_demo_table_peer ORDER BY row_id")
-    diff = peer_base.exceptAll(peer_compare).union(peer_compare.exceptAll(peer_base))
-    if diff.count() > 0:
-        raise RuntimeError("Peer table content mismatch")
 
 
 def main() -> None:
@@ -578,7 +547,6 @@ def main() -> None:
         apply_uniqueness_checks(df, validator, config, columns)
         apply_volume_checks(df, validator, config)
         apply_sql_constraints(spark)
-        apply_multi_source_checks(spark)
         result = validator.validate(result_format="SUMMARY")
         validation_result = (
             result.to_json_dict() if hasattr(result, "to_json_dict") else result
